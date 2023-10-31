@@ -1,11 +1,4 @@
-/* stylelint-disable prettier/prettier */
-
 /* Example of @import use
 This imports the `utility.css` file */
+@import url('./reset.css');
 @import url('./utility.css');
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
