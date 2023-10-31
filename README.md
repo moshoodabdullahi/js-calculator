@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://dema-js-calculator.netlify.app/)
 
 ### Development (Running locally)
 
