@@ -1,3 +1,4 @@
 /* Example of @import use
-This imports the `reset.css` file */
+This imports the `utility.css` file */
 @import url('./reset.css');
+@import url('./utility.css');

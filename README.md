@@ -1,25 +1,28 @@
-# Project Name
+# JS CALCULATOR
 
-> One paragraph statement about the project.
+> A Calculator webpage built using Js: addEventListener, querySelector, CSS Flexbox, Typography and Semantic HTML.
 
 ![screenshot](./app_screenshot.png)
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- HTML5 elements
+- CSS properties
+- Linters
+  - [Prettier](https://prettier.io/),
+  - [Stylelint](https://stylelint.io/).
+- GitHub Action
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://dema-js-calculator.netlify.app/)
 
 ### Development (Running locally)
 
 - Clone the project
 
 ```bash
-git clone https://github.com/user/js-template.git
+git clone https://github.com/moshoodabdullahi/js-calculator.git
 
 ```
 
@@ -102,9 +105,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration, resources/assets used
-- etc
+- [TheOdinProject](https://www.theodinproject.com/paths/foundations/courses/foundations)
+- [Front-End Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
 
 ## 📝 License
 
