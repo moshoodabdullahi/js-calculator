@@ -2,3 +2,221 @@
 This imports the `utility.css` file */
 @import url('./reset.css');
 @import url('./utility.css');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+.theme1 {
+  --bg-theme: hsl(222deg 26% 31%);
+  --bg-toggle-keypad: hsl(223deg 31% 20%);
+  --bg-screen: hsl(224deg 36% 15%);
+  --bg-del-reset-key: hsl(225deg 21% 49%);
+  --key-shadow-del-reset: hsl(224deg 28% 35%);
+  --bg-keys: hsl(30deg 25% 89%);
+  --key-shadow-keys: hsl(28deg 16% 65%);
+  --bg-result-toggle-key: hsl(6deg 63% 50%);
+  --key-shadow-result: hsl(6deg 70% 34%);
+  --text-color: hsl(30deg 25% 89%);
+  --text-del-result-color: hsl(0deg 0% 100%);
+  --text-result-color: hsl(221deg 14% 31%);
+  --equals-color: hsl(0deg 0% 100%);
+  --dot-position: 8px;
+  --del-reset-hover-color: #a2b3e1;
+  --key-hover: #fff;
+  --reset-dot-hover: #f96c5b;
+}
+
+.theme2 {
+  --bg-theme: hsl(0deg 0% 90%);
+  --bg-toggle-keypad: hsl(0deg 5% 81%);
+  --bg-screen: hsl(0deg 0% 93%);
+  --bg-del-reset-key: hsl(185deg 42% 37%);
+  --key-shadow-del-reset: hsl(185deg 58% 25%);
+  --bg-keys: hsl(45deg 7% 89%);
+  --key-shadow-keys: hsl(35deg 11% 61%);
+  --bg-result-toggle-key: hsl(25deg 98% 40%);
+  --key-shadow-result: hsl(25deg 99% 27%);
+  --text-color: hsl(60deg 10% 19%);
+  --text-del-result-color: hsl(0deg 0% 100%);
+  --text-result-color: hsl(60deg 10% 19%);
+  --equals-color: hsl(0deg 0% 100%);
+  --dot-position: 25px;
+  --del-reset-hover-color: #61b4bd;
+  --key-hover: #fff;
+  --reset-dot-hover: #ff8b38;
+}
+
+.theme3 {
+  --bg-theme: hsl(268deg 75% 9%);
+  --bg-toggle-keypad: hsl(268deg 71% 12%);
+  --bg-screen: hsl(268deg 71% 12%);
+  --bg-del-reset-key: hsl(281deg 89% 26%);
+  --key-shadow-del-reset: hsl(285deg 91% 52%);
+  --bg-keys: hsl(273deg 47% 21%);
+  --key-shadow-keys: hsl(290deg 70% 36%);
+  --bg-result-toggle-key: hsl(176deg 100% 44%);
+  --key-shadow-result: hsl(177deg 92% 70%);
+  --text-color: hsl(52deg 100% 62%);
+  --text-del-result-color: hsl(0deg 0% 100%);
+  --text-result-color: hsl(52deg 100% 62%);
+  --equals-color: hsl(198deg 20% 13%);
+  --dot-position: 45px;
+  --del-reset-hover-color: #8530af;
+  --key-hover: #6b34ac;
+  --reset-dot-hover: #94fff9;
+}
+
+.dot {
+  background-color: var(--bg-result-toggle-key);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 6px;
+  position: relative;
+  top: 7px;
+  left: var(--dot-position);
+}
+
+.theme-1-label,
+.theme-2-label,
+.theme-3-label,
+.header-txt {
+  font-size: 13px;
+  color: var(--text-color);
+  position: relative;
+  left: 70px;
+}
+
+.main-container {
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  align-items: center;
+}
+
+.header {
+  margin: 50px 0 10px;
+  position: relative;
+}
+
+.screen-input {
+  color: var(--text-color);
+}
+
+.header-text {
+  color: var(--text-color);
+  position: absolute;
+  left: -90px;
+  top: -15px;
+}
+
+.header-txt {
+  color: var(--text-color);
+  align-self: center;
+}
+
+.theme-input {
+  height: 30px;
+  width: 80px;
+  border-radius: 30px;
+  background-color: var(--bg-toggle-keypad);
+  position: relative;
+  left: 90px;
+}
+
+.theme-1,
+.theme-2,
+.theme-3 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  top: 7px;
+}
+
+.theme-1-label,
+.theme-2-label,
+.theme-3-label {
+  top: -50px;
+  left: 20px;
+  color: var(--text-color);
+}
+
+.screen {
+  background-color: var(--bg-screen);
+  height: 80px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: right;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 10px;
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.keypad {
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(5, 70px);
+  background-color: var(--bg-toggle-keypad);
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+
+.reset,
+.equals-key {
+  grid-column: span 2;
+}
+
+.key,
+.del,
+.reset,
+.operator,
+.equals-key {
+  margin: 0 8px;
+  padding: 8px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--bg-keys);
+  color: var(--text-result-color);
+  box-shadow: 0 5px var(--key-shadow-keys);
+}
+
+.del,
+.reset {
+  background-color: var(--bg-del-reset-key);
+  box-shadow: 0 5px var(--key-shadow-del-reset);
+  color: var(--text-del-result-color);
+  font-size: 18px;
+  padding: 17px 0;
+}
+
+.del:hover,
+.reset:hover {
+  background-color: var(--del-reset-hover-color);
+}
+
+.key:hover,
+.operator:hover {
+  background-color: var(--key-hover);
+}
+
+.equals-key:hover,
+.dot:hover {
+  background-color: var(--reset-dot-hover);
+}
+
+.key:active,
+.del:active,
+.reset:active,
+.operator:active,
+.equals-key:active {
+  transform: translateY(2px);
+}
+
+.equal {
+  background-color: var(--bg-result-toggle-key);
+  box-shadow: 0 5px var(--key-shadow-result);
+  color: var(--equals-color);
+}
