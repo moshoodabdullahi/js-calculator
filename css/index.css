@@ -76,8 +76,6 @@ This imports the `utility.css` file */
 .theme-choice-1,
 .theme-choice-2,
 .theme-choice-3 {
-  appearance: none;
-  position: absolute;
   width: 15px;
   height: 15px;
   border-radius: 30px;
@@ -153,7 +151,6 @@ main {
   width: 80px;
   border-radius: 30px;
   background-color: var(--keypad-toggle-background-color);
-  position: relative;
   left: 90px;
 }
 
