@@ -52,8 +52,8 @@ This imports the `utility.css` file */
   --key-shadow-color: hsl(285deg 91% 52%);
   --primary-bg-color: hsl(273deg 47% 21%);
   --key-shadow-keys: hsl(290deg 70% 36%);
-  --toggle-key-background-color: hsl(176deg 100% 44%);
-  --toggle-key-shadow-color: hsl(177deg 92% 70%);
+  --toggle-key-background-color: hsl(177deg 92% 70%);
+  --toggle-key-shadow-color: hsl(176deg 100% 44%);
   --secondary-color: hsl(52deg 100% 62%);
   --primary-color: hsl(0deg 0% 100%);
   --tertiary-color: hsl(52deg 100% 62%);
@@ -73,31 +73,37 @@ This imports the `utility.css` file */
   left: 90px;
 }
 
-.theme-1,
-.theme-2,
-.theme-3 {
+.theme-choice-1,
+.theme-choice-2,
+.theme-choice-3 {
   appearance: none;
   position: absolute;
   width: 15px;
   height: 15px;
   border-radius: 30px;
   top: 7px;
+  cursor: pointer;
 }
 
-.theme-1 {
+.theme-choice-1 {
   left: 10px;
 }
 
-.theme-2 {
+.theme-choice-2 {
   left: 33px;
 }
 
-.theme-3 {
+.theme-choice-3 {
   left: 55px;
 }
 
 input:checked {
   background-color: var(--toggle-key-shadow-color);
+  cursor: pointer;
+}
+
+input:checked:hover {
+  background-color: var(--toggle-key-background-color);
 }
 
 main {
@@ -105,16 +111,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.dot {
-  background-color: var(--toggle-key-background-color);
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin-left: 6px;
-  top: 7px;
-  left: var(--dot-position);
 }
 
 .theme-1-label,
@@ -167,6 +163,7 @@ main {
   top: -50px;
   left: 20px;
   color: var(--secondary-color);
+  cursor: pointer;
 }
 
 .screen {
@@ -210,6 +207,7 @@ main {
   background-color: var(--primary-bg-color);
   color: var(--tertiary-color);
   box-shadow: 0 5px var(--key-shadow-keys);
+  cursor: pointer;
 }
 
 .del,
@@ -221,11 +219,6 @@ main {
   padding: 17px 0;
 }
 
-.del:hover,
-.reset:hover {
-  background-color: var(--primary-text-color);
-}
-
 .key:hover,
 .operator:hover {
   background-color: var(--key-hover);
@@ -234,6 +227,11 @@ main {
 .equals-key:hover,
 .dot:hover {
   background-color: var(--reset-dot-hover);
+}
+
+.del:hover,
+.reset:hover {
+  background-color: var(--primary-text-color);
 }
 
 .key:active,
