@@ -1,6 +1,6 @@
 # JS CALCULATOR
 
-> A Calculator webpage built using Js: addEventListener, querySelector, CSS Flexbox, CSS Grid, Typography and Semantic HTML.
+> A Calculator webpage built using CSS Variables, Js: addEventListener, querySelector, CSS Flexbox, CSS Grid, Typography and Semantic HTML.
 
 ![screenshot](./app_screenshot.png)
 

@@ -5,72 +5,114 @@ This imports the `utility.css` file */
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 
 .theme1 {
-  --bg-theme: hsl(222deg 26% 31%);
-  --bg-toggle-keypad: hsl(223deg 31% 20%);
-  --bg-screen: hsl(224deg 36% 15%);
-  --bg-del-reset-key: hsl(225deg 21% 49%);
-  --key-shadow-del-reset: hsl(224deg 28% 35%);
-  --bg-keys: hsl(30deg 25% 89%);
+  --main-background-color: hsl(222deg 26% 31%);
+  --keypad-toggle-background-color: hsl(223deg 31% 20%);
+  --screen-background-color: hsl(224deg 36% 15%);
+  --key-backgound-color: hsl(225deg 21% 49%);
+  --key-shadow-color: hsl(224deg 28% 35%);
+  --primary-bg-color: hsl(30deg 25% 89%);
   --key-shadow-keys: hsl(28deg 16% 65%);
-  --bg-result-toggle-key: hsl(6deg 63% 50%);
-  --key-shadow-result: hsl(6deg 70% 34%);
-  --text-color: hsl(30deg 25% 89%);
-  --text-del-result-color: hsl(0deg 0% 100%);
-  --text-result-color: hsl(221deg 14% 31%);
+  --toggle-key-background-color: hsl(6deg 63% 50%);
+  --toggle-key-shadow-color: hsl(6deg 70% 34%);
+  --secondary-color: hsl(30deg 25% 89%);
+  --primary-color: hsl(0deg 0% 100%);
+  --tertiary-color: hsl(221deg 14% 31%);
   --equals-color: hsl(0deg 0% 100%);
   --dot-position: 8px;
-  --del-reset-hover-color: #a2b3e1;
-  --key-hover: #fff;
-  --reset-dot-hover: #f96c5b;
+  --primary-text-color: hsl(224deg 51% 76%);
+  --key-hover: hsl(0deg 0% 100%);
+  --reset-dot-hover: hsl(6deg 93% 67%);
 }
 
 .theme2 {
-  --bg-theme: hsl(0deg 0% 90%);
-  --bg-toggle-keypad: hsl(0deg 5% 81%);
-  --bg-screen: hsl(0deg 0% 93%);
-  --bg-del-reset-key: hsl(185deg 42% 37%);
-  --key-shadow-del-reset: hsl(185deg 58% 25%);
-  --bg-keys: hsl(45deg 7% 89%);
+  --main-background-color: hsl(0deg 0% 90%);
+  --keypad-toggle-background-color: hsl(0deg 5% 81%);
+  --screen-background-color: hsl(0deg 0% 93%);
+  --key-backgound-color: hsl(185deg 42% 37%);
+  --key-shadow-color: hsl(185deg 58% 25%);
+  --primary-bg-color: hsl(45deg 7% 89%);
   --key-shadow-keys: hsl(35deg 11% 61%);
-  --bg-result-toggle-key: hsl(25deg 98% 40%);
-  --key-shadow-result: hsl(25deg 99% 27%);
-  --text-color: hsl(60deg 10% 19%);
-  --text-del-result-color: hsl(0deg 0% 100%);
-  --text-result-color: hsl(60deg 10% 19%);
+  --toggle-key-background-color: hsl(25deg 98% 40%);
+  --toggle-key-shadow-color: hsl(25deg 99% 27%);
+  --secondary-color: hsl(60deg 10% 19%);
+  --primary-color: hsl(0deg 0% 100%);
+  --tertiary-color: hsl(60deg 10% 19%);
   --equals-color: hsl(0deg 0% 100%);
   --dot-position: 25px;
-  --del-reset-hover-color: #61b4bd;
-  --key-hover: #fff;
-  --reset-dot-hover: #ff8b38;
+  --primary-text-color: hsl(186deg 41% 56%);
+  --key-hover: hsl(0deg 0% 100%);
+  --reset-dot-hover: hsl(25deg 100% 61%);
 }
 
 .theme3 {
-  --bg-theme: hsl(268deg 75% 9%);
-  --bg-toggle-keypad: hsl(268deg 71% 12%);
-  --bg-screen: hsl(268deg 71% 12%);
-  --bg-del-reset-key: hsl(281deg 89% 26%);
-  --key-shadow-del-reset: hsl(285deg 91% 52%);
-  --bg-keys: hsl(273deg 47% 21%);
+  --main-background-color: hsl(268deg 75% 9%);
+  --keypad-toggle-background-color: hsl(268deg 71% 12%);
+  --screen-background-color: hsl(268deg 71% 12%);
+  --key-backgound-color: hsl(281deg 89% 26%);
+  --key-shadow-color: hsl(285deg 91% 52%);
+  --primary-bg-color: hsl(273deg 47% 21%);
   --key-shadow-keys: hsl(290deg 70% 36%);
-  --bg-result-toggle-key: hsl(176deg 100% 44%);
-  --key-shadow-result: hsl(177deg 92% 70%);
-  --text-color: hsl(52deg 100% 62%);
-  --text-del-result-color: hsl(0deg 0% 100%);
-  --text-result-color: hsl(52deg 100% 62%);
+  --toggle-key-background-color: hsl(176deg 100% 44%);
+  --toggle-key-shadow-color: hsl(177deg 92% 70%);
+  --secondary-color: hsl(52deg 100% 62%);
+  --primary-color: hsl(0deg 0% 100%);
+  --tertiary-color: hsl(52deg 100% 62%);
   --equals-color: hsl(198deg 20% 13%);
   --dot-position: 45px;
-  --del-reset-hover-color: #8530af;
-  --key-hover: #6b34ac;
-  --reset-dot-hover: #94fff9;
+  --primary-text-color: hsl(280deg 57% 44%);
+  --key-hover: hsl(268deg 54% 44%);
+  --reset-dot-hover: hsl(177deg 100% 79%);
+}
+
+.input {
+  height: 30px;
+  width: 80px;
+  border-radius: 30px;
+  background-color: var(--bg-toggle-keypad);
+  position: relative;
+  left: 90px;
+}
+
+.theme-1,
+.theme-2,
+.theme-3 {
+  appearance: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  top: 7px;
+}
+
+.theme-1 {
+  left: 10px;
+}
+
+.theme-2 {
+  left: 33px;
+}
+
+.theme-3 {
+  left: 55px;
+}
+
+input:checked {
+  background-color: var(--toggle-key-shadow-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .dot {
-  background-color: var(--bg-result-toggle-key);
+  background-color: var(--toggle-key-background-color);
   width: 15px;
   height: 15px;
   border-radius: 50%;
   margin-left: 6px;
-  position: relative;
   top: 7px;
   left: var(--dot-position);
 }
@@ -80,8 +122,7 @@ This imports the `utility.css` file */
 .theme-3-label,
 .header-txt {
   font-size: 13px;
-  color: var(--text-color);
-  position: relative;
+  color: var(--secondary-color);
   left: 70px;
 }
 
@@ -94,22 +135,20 @@ This imports the `utility.css` file */
 
 .header {
   margin: 50px 0 10px;
-  position: relative;
 }
 
-.screen-input {
-  color: var(--text-color);
+.screen-display {
+  color: var(--secondary-color);
 }
 
 .header-text {
-  color: var(--text-color);
-  position: absolute;
+  color: var(--secondary-color);
   left: -90px;
   top: -15px;
 }
 
 .header-txt {
-  color: var(--text-color);
+  color: var(--secondary-color);
   align-self: center;
 }
 
@@ -117,19 +156,9 @@ This imports the `utility.css` file */
   height: 30px;
   width: 80px;
   border-radius: 30px;
-  background-color: var(--bg-toggle-keypad);
+  background-color: var(--keypad-toggle-background-color);
   position: relative;
   left: 90px;
-}
-
-.theme-1,
-.theme-2,
-.theme-3 {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-radius: 30px;
-  top: 7px;
 }
 
 .theme-1-label,
@@ -137,11 +166,11 @@ This imports the `utility.css` file */
 .theme-3-label {
   top: -50px;
   left: 20px;
-  color: var(--text-color);
+  color: var(--secondary-color);
 }
 
 .screen {
-  background-color: var(--bg-screen);
+  background-color: var(--screen-background-color);
   height: 80px;
   width: 100%;
   border-radius: 10px;
@@ -150,7 +179,7 @@ This imports the `utility.css` file */
   flex-direction: column;
   justify-content: space-around;
   padding-right: 10px;
-  color: var(--text-color);
+  color: var(--secondary-color);
   overflow: hidden;
 }
 
@@ -159,7 +188,7 @@ This imports the `utility.css` file */
   align-items: center;
   grid-template-columns: repeat(4, 70px);
   grid-template-rows: repeat(5, 70px);
-  background-color: var(--bg-toggle-keypad);
+  background-color: var(--keypad-toggle-background-color);
   padding: 15px 10px;
   border-radius: 10px;
 }
@@ -178,23 +207,23 @@ This imports the `utility.css` file */
   padding: 8px 0;
   border-radius: 5px;
   border: none;
-  background-color: var(--bg-keys);
-  color: var(--text-result-color);
+  background-color: var(--primary-bg-color);
+  color: var(--tertiary-color);
   box-shadow: 0 5px var(--key-shadow-keys);
 }
 
 .del,
 .reset {
-  background-color: var(--bg-del-reset-key);
-  box-shadow: 0 5px var(--key-shadow-del-reset);
-  color: var(--text-del-result-color);
+  background-color: var(--key-backgound-color);
+  box-shadow: 0 5px var(--key-shadow-color);
+  color: var(--primary-color);
   font-size: 18px;
   padding: 17px 0;
 }
 
 .del:hover,
 .reset:hover {
-  background-color: var(--del-reset-hover-color);
+  background-color: var(--primary-text-color);
 }
 
 .key:hover,
@@ -216,7 +245,7 @@ This imports the `utility.css` file */
 }
 
 .equal {
-  background-color: var(--bg-result-toggle-key);
-  box-shadow: 0 5px var(--key-shadow-result);
+  background-color: var(--toggle-key-background-color);
+  box-shadow: 0 5px var(--toggle-key-shadow-color);
   color: var(--equals-color);
 }

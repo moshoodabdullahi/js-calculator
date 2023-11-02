@@ -13,3 +13,11 @@
 .d-none {
   display: none;
 }
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
