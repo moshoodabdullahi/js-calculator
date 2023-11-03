@@ -25,3 +25,15 @@
 .appearance {
   appearance: none;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+.flex-d {
+  flex-direction: column;
+}
+
+.align {
+  align-items: center;
+}

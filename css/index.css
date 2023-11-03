@@ -69,7 +69,6 @@ This imports the `utility.css` file */
   width: 80px;
   border-radius: 30px;
   background-color: var(--bg-toggle-keypad);
-  position: relative;
   left: 90px;
 }
 
@@ -80,7 +79,6 @@ This imports the `utility.css` file */
   height: 15px;
   border-radius: 30px;
   top: 7px;
-  cursor: pointer;
 }
 
 .theme-choice-1 {
@@ -97,7 +95,6 @@ This imports the `utility.css` file */
 
 input:checked {
   background-color: var(--toggle-key-shadow-color);
-  cursor: pointer;
 }
 
 input:checked:hover {
@@ -105,10 +102,7 @@ input:checked:hover {
 }
 
 main {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .theme-1-label,
@@ -121,10 +115,8 @@ main {
 }
 
 .main-container {
-  flex-direction: column;
   width: 300px;
   margin: auto;
-  align-items: center;
 }
 
 .header {
@@ -160,7 +152,6 @@ main {
   top: -50px;
   left: 20px;
   color: var(--secondary-color);
-  cursor: pointer;
 }
 
 .screen {
@@ -170,7 +161,6 @@ main {
   border-radius: 10px;
   margin-bottom: 15px;
   text-align: right;
-  flex-direction: column;
   justify-content: space-around;
   padding-right: 10px;
   color: var(--secondary-color);
@@ -179,7 +169,6 @@ main {
 
 .keypad {
   justify-content: center;
-  align-items: center;
   grid-template-columns: repeat(4, 70px);
   grid-template-rows: repeat(5, 70px);
   background-color: var(--keypad-toggle-background-color);
@@ -204,7 +193,6 @@ main {
   background-color: var(--primary-bg-color);
   color: var(--tertiary-color);
   box-shadow: 0 5px var(--key-shadow-keys);
-  cursor: pointer;
 }
 
 .del,
