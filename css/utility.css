@@ -6,6 +6,34 @@
   display: flex;
 }
 
+.d-grid {
+  display: grid;
+}
+
 .d-none {
   display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.appearance {
+  appearance: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.flex-d {
+  flex-direction: column;
+}
+
+.align {
+  align-items: center;
 }
