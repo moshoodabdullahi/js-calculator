@@ -13,38 +13,38 @@
         <h1 class="header-text absolute">calc</h1>
         <h2 class="header-txt relative">THEME</h2>
         <div class="theme-container">
-          <form>
+          <form name="themeForm">
+            <div class="theme-label relative">
+              <label class="theme-1-label theme-label pointer relative" for="theme-1-attr">1</label>
+              <label class="theme-2-label theme-label pointer relative" for="theme-2-attr">2</label>
+              <label class="theme-3-label theme-label pointer relative" for="theme-3-attr">3</label>
+            </div>
             <div class="theme-input relative">
               <input
-                class="theme-choice-1 absolute appearance pointer theme1"
+                class="theme-choice-1 appearance pointer absolute theme1"
                 type="radio"
                 name="theme"
                 id="theme-1-attr"
-                value="theme-1"
+                value="theme1"
                 aria-label="theme-1"
                 checked="radio"
               />
-              <label class="theme-1-label theme-label pointer relative" for="theme-1-attr">1</label>
-
               <input
                 class="theme-choice-2 appearance pointer absolute theme2"
                 type="radio"
-                value="theme-2"
                 name="theme"
                 id="theme-2-attr"
+                value="theme2"
                 aria-label="theme-2"
               />
-              <label class="theme-2-label theme-label pointer relative" for="theme-2-attr">2</label>
-
               <input
                 class="theme-choice-3 appearance pointer absolute theme3"
                 type="radio"
-                value="theme-3"
                 name="theme"
                 id="theme-3-attr"
+                value="theme3"
                 aria-label="theme-3"
               />
-              <label class="theme-3-label theme-label pointer relative" for="theme-3-attr">3</label>
             </div>
           </form>
         </div>
@@ -73,6 +73,6 @@
         <button class="key equals-key equal" value="=" type="button">=</button>
       </div>
     </main>
-    <script src="js/index.js"></script>
+    <script src="js/theme.js"></script>
   </body>
 </html>

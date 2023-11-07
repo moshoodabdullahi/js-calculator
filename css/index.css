@@ -64,12 +64,14 @@ This imports the `utility.css` file */
   --reset-dot-hover: hsl(177deg 100% 79%);
 }
 
-.input {
-  height: 30px;
-  width: 80px;
-  border-radius: 30px;
-  background-color: var(--bg-toggle-keypad);
-  left: 90px;
+.theme1,
+.theme2,
+.theme3 {
+  transition: 1s;
+}
+
+.theme-label {
+  top: 12px;
 }
 
 .theme-choice-1,
@@ -101,10 +103,6 @@ input:checked:hover {
   background-color: var(--toggle-key-background-color);
 }
 
-main {
-  justify-content: center;
-}
-
 .theme-1-label,
 .theme-2-label,
 .theme-3-label,
@@ -129,8 +127,8 @@ main {
 
 .header-text {
   color: var(--secondary-color);
-  left: -90px;
-  top: -15px;
+  left: -78px;
+  top: 8px;
 }
 
 .header-txt {
@@ -143,14 +141,15 @@ main {
   width: 80px;
   border-radius: 30px;
   background-color: var(--keypad-toggle-background-color);
-  left: 90px;
+  left: 80px;
+  top: -24px;
 }
 
 .theme-1-label,
 .theme-2-label,
 .theme-3-label {
-  top: -50px;
-  left: 20px;
+  top: -35px;
+  left: 100px;
   color: var(--secondary-color);
 }
 
@@ -241,19 +240,22 @@ main {
   .theme1,
   .theme2,
   .theme3 {
-    top: 5px;
+    top: 4px;
   }
 
   .theme-choice-1 {
     left: 10px;
+    transition: 0.5s;
   }
 
   .theme-choice-2 {
     left: 30px;
+    transition: 0.5s;
   }
 
   .theme-choice-3 {
     left: 52px;
+    transition: 0.5s;
   }
 
   .main-container {
@@ -262,17 +264,18 @@ main {
 
   .header-text {
     left: -140px;
-    top: -5px;
+    top: 15px;
     font-size: 22px;
   }
 
   .header-txt {
     font-size: 10px;
     left: 125px;
+    top: -1px;
   }
 
   .theme-input {
-    height: 25px;
+    height: 23px;
     width: 75px;
     left: 135px;
   }
@@ -281,7 +284,8 @@ main {
   .theme-2-label,
   .theme-3-label {
     top: -35px;
-    left: 20px;
+    left: 140px;
+    padding-left: 6px;
   }
 
   .keypad {
