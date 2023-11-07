@@ -232,3 +232,74 @@ main {
   box-shadow: 0 5px var(--toggle-key-shadow-color);
   color: var(--equals-color);
 }
+
+@media (width >=1000px) {
+  .calc {
+    width: 400px;
+  }
+
+  .theme1,
+  .theme2,
+  .theme3 {
+    top: 5px;
+  }
+
+  .theme-choice-1 {
+    left: 10px;
+  }
+
+  .theme-choice-2 {
+    left: 30px;
+  }
+
+  .theme-choice-3 {
+    left: 52px;
+  }
+
+  .main-container {
+    width: 400px;
+  }
+
+  .header-text {
+    left: -140px;
+    top: -5px;
+    font-size: 22px;
+  }
+
+  .header-txt {
+    font-size: 10px;
+    left: 125px;
+  }
+
+  .theme-input {
+    height: 25px;
+    width: 75px;
+    left: 135px;
+  }
+
+  .theme-1-label,
+  .theme-2-label,
+  .theme-3-label {
+    top: -35px;
+    left: 20px;
+  }
+
+  .keypad {
+    grid-template-columns: repeat(4, 95px);
+    grid-template-rows: repeat(5, 70px);
+  }
+
+  .key,
+  .del,
+  .reset,
+  .operator,
+  .equals-key {
+    margin: 0 8px;
+    padding: 4px 0;
+  }
+
+  .del,
+  .reset {
+    padding: 14px 0;
+  }
+}
