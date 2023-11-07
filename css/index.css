@@ -64,6 +64,12 @@ This imports the `utility.css` file */
   --reset-dot-hover: hsl(177deg 100% 79%);
 }
 
+.theme1,
+.theme2,
+.theme3 {
+  transition: 1s;
+}
+
 .input {
   height: 30px;
   width: 80px;
@@ -246,14 +252,17 @@ main {
 
   .theme-choice-1 {
     left: 10px;
+    transition: 0.5s;
   }
 
   .theme-choice-2 {
     left: 30px;
+    transition: 0.5s;
   }
 
   .theme-choice-3 {
     left: 52px;
+    transition: 0.5s;
   }
 
   .main-container {
