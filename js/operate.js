@@ -10,7 +10,7 @@ const operate = (operand1, operand2, operator) => {
       if (operand2 !== 0) {
         return operand1 / operand2;
       }
-      return '';
+      return 'Cannot Divide By Zero';
 
     default:
       return 'Invalid operator';
