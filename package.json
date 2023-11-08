@@ -12,6 +12,8 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "htmlhint": "^1.1.4",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "prettier": "2.8.8",
     "puppeteer": "^20.4.0",
     "stylelint": "^15.6.2",
@@ -31,6 +33,7 @@
     "eslint": "npx eslint . --fix",
     "eslint:check": "npx eslint .",
     "axe": "node axe-check.js",
-    "lint:html": "htmlhint ."
+    "lint:html": "htmlhint .",
+    "test": "jest"
   }
 }
