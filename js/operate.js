@@ -32,4 +32,4 @@ const operate = (operand1, operand2, operator) => {
 
 operate();
 
-module.exports;
+module.exports = operate;
