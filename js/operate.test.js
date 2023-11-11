@@ -131,20 +131,20 @@ describe('With Rounding and Precision', () => {
 });
 
 describe('With Extreme Values', () => {
-  test('adds 1e308 + 1e308 to equal Infinity', () => {
-    expect(operate(1e308, 1e308, '+')).toBe(Infinity);
+  test('adds 1e308 + 1e308 to equal Out Of Range', () => {
+    expect(operate(1e308, 1e308, '+')).toBe('Out Of Range');
   });
 
-  test('subtracts -1e308 - 1e308 to equal Infinity', () => {
-    expect(operate(-1e308, 1e308, '-')).toBe(-Infinity);
+  test('subtracts -1e308 - 1e308 to equal Out Of Range', () => {
+    expect(operate(-1e308, 1e308, '-')).toBe('Out Of Range');
   });
 
-  test('multiplies 1e308 * 2 to equal Infinity', () => {
-    expect(operate(1e308, 2, '*')).toBe(Infinity);
+  test('multiplies 1e308 * 2 to equal Out Of Range', () => {
+    expect(operate(1e308, 2, '*')).toBe('Out Of Range');
   });
 
-  test('divide 1 / 1e-308 to equal 1e308', () => {
-    expect(operate(1, 1e-308, '/')).toBe(1e308);
+  test('divide 1 / 1e-308 to equal Out Of Range', () => {
+    expect(operate(1, 1e-308, '/')).toBe('Out Of Range');
   });
 });
 
