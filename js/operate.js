@@ -2,7 +2,7 @@ const operate = (operand1, operand2, operator) => {
   let result;
 
   if (typeof operand1 !== 'number' || typeof operand2 !== 'number') {
-    return ('Both operands must be numbers');
+    return 'Both operands must be numbers';
   }
 
   switch (operator) {
@@ -20,7 +20,7 @@ const operate = (operand1, operand2, operator) => {
         return 'Cannot Divide By Zero';
       }
       result = operand1 / operand2;
-        break;
+      break;
 
     default:
       return 'Invalid Operator';
