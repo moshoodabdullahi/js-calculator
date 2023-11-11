@@ -1,20 +1,33 @@
 const operate = (operand1, operand2, operator) => {
+  let result;
+
+  if (typeof operand1 !== 'number' || typeof operand2 !== 'number') {
+    return ('Both operands must be numbers');
+  }
+
   switch (operator) {
     case '+':
-      return operand1 + operand2;
+      result = operand1 + operand2;
+      break;
     case '-':
-      return operand1 - operand2;
+      result = operand1 - operand2;
+      break;
     case '*':
-      return operand1 * operand2;
+      result = operand1 * operand2;
+      break;
     case '/':
-      if (operand2 !== 0) {
-        return operand1 / operand2;
+      if (operand2 === 0) {
+        return 'Cannot Divide By Zero';
       }
-      return 'Cannot Divide By Zero';
+      result = operand1 / operand2;
+        break;
 
     default:
-      return 'Invalid operator';
+      return 'Invalid Operator';
   }
+  const outcome = parseFloat(result.toFixed(12));
+
+  return outcome;
 };
 
 operate();
