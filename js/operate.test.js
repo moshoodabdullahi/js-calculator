@@ -13,15 +13,15 @@ describe('With Basic Arithmetic Operations', () => {
     expect(operate(2, 1, '-')).toBe(1);
   });
 
-  test('multiplies 3 * 4 to equal 0.3', () => {
-    expect(operate(0.1, 0.2, '+')).toBe(0.3);
+  test('multiplies 3 * 4 to equal 12', () => {
+    expect(operate(3, 4, '*')).toBe(12);
   });
 
   test('divide 6 / 2 to equal 3', () => {
     expect(operate(6, 2, '/')).toBe(3);
   });
 
-  test('adds 2.345 + 0.345 to equal 2.7', () => {
+  test('adds 2.345 + 0.345 to equal 2.69', () => {
     expect(operate(2.345, 0.345, '+')).toBe(2.69);
   });
 });
@@ -45,12 +45,12 @@ describe('With Zero as Operand', () => {
 });
 
 describe('With Division by Zero', () => {
-  test('divide 6 / 0 to equal Cannot Divide By Zero', () => {
-    expect(operate(6, 0, '/')).toBe('Cannot Divide By Zero');
+  test('divide 6 / 0 to equal UNDEFINED', () => {
+    expect(operate(6, 0, '/')).toBe('UNDEFINED');
   });
 
-  test('divide 0 / 0 to equal Cannot Divide By Zero', () => {
-    expect(operate(0, 0, '/')).toBe('Cannot Divide By Zero');
+  test('divide 0 / 0 to equal UNDEFINED', () => {
+    expect(operate(0, 0, '/')).toBe('UNDEFINED');
   });
 });
 
@@ -103,10 +103,6 @@ describe('With Mixing Positive and Negative Numbers', () => {
     expect(operate(-3, -2, '*')).toBe(6);
   });
 
-  test('multiplies -3 * -2 to equal 6', () => {
-    expect(operate(-3, -2, '*')).toBe(6);
-  });
-
   test('divide 8 / -2 to equal -4', () => {
     expect(operate(8, -2, '/')).toBe(-4);
   });
@@ -131,35 +127,35 @@ describe('With Rounding and Precision', () => {
 });
 
 describe('With Extreme Values', () => {
-  test('adds 1e308 + 1e308 to equal Out Of Range', () => {
-    expect(operate(1e308, 1e308, '+')).toBe('Out Of Range');
+  test('adds 1e308 + 1e308 to equal OUT OF RANGE', () => {
+    expect(operate(1e308, 1e308, '+')).toBe('OUT OF RANGE');
   });
 
-  test('subtracts -1e308 - 1e308 to equal Out Of Range', () => {
-    expect(operate(-1e308, 1e308, '-')).toBe('Out Of Range');
+  test('subtracts -1e308 - 1e308 to equal OUT OF RANGE', () => {
+    expect(operate(-1e308, 1e308, '-')).toBe('OUT OF RANGE');
   });
 
-  test('multiplies 1e308 * 2 to equal Out Of Range', () => {
-    expect(operate(1e308, 2, '*')).toBe('Out Of Range');
+  test('multiplies 1e308 * 2 to equal OUT OF RANGE', () => {
+    expect(operate(1e308, 2, '*')).toBe('OUT OF RANGE');
   });
 
-  test('divide 1 / 1e-308 to equal Out Of Range', () => {
-    expect(operate(1, 1e-308, '/')).toBe('Out Of Range');
+  test('divide 1 / 1e-308 to equal OUT OF RANGE', () => {
+    expect(operate(1, 1e-308, '/')).toBe('OUT OF RANGE');
   });
 });
 
 describe('With Mixing Data Types', () => {
-  test('adds "2" + 3 to equal Both operands must be numbers', () => {
-    expect(operate('2', 3, '+')).toBe('Both operands must be numbers');
+  test('adds "2" + 3 to equal NOT A NUMBER', () => {
+    expect(operate('2', 3, '+')).toBe('NOT A NUMBER');
   });
 
-  test('subtracts 4 - "1" to equal Both operands must be numbers', () => {
-    expect(operate(4, '1', '-')).toBe('Both operands must be numbers');
+  test('subtracts 4 - "1" to equal NOT A NUMBER', () => {
+    expect(operate(4, '1', '-')).toBe('NOT A NUMBER');
   });
 });
 
 describe('With Unsupported Operators', () => {
-  test('5 % 2 to equal Invalid Operator', () => {
-    expect(operate(5, 2, '%')).toBe('Invalid Operator');
+  test('5 % 2 to equal INVALID OPERATOR', () => {
+    expect(operate(5, 2, '%')).toBe('INVALID OPERATOR');
   });
 });

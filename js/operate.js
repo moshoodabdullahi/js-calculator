@@ -1,12 +1,13 @@
 const operate = (operand1, operand2, operator) => {
-  let result;
-
   if (typeof operand1 !== 'number' || typeof operand2 !== 'number') {
-    return 'Both operands must be numbers';
+    return 'NOT A NUMBER';
   }
-  if (operand1 > 1e13 || operand1 < -1e13 || operand2 > 1e13 || operand2 < -1e13) {
-    return 'Out Of Range';
+
+  if (Math.abs(operand1) > 1e13 || Math.abs(operand2) > 1e13) {
+    return 'OUT OF RANGE';
   }
+
+  let result;
 
   switch (operator) {
     case '+':
@@ -20,16 +21,16 @@ const operate = (operand1, operand2, operator) => {
       break;
     case '/':
       if (operand2 === 0) {
-        return 'Cannot Divide By Zero';
+        return 'UNDEFINED';
       }
       result = operand1 / operand2;
       break;
 
     default:
-      return 'Invalid Operator';
+      return 'INVALID OPERATOR';
   }
-  if (result > 1e13) {
-    return 'Out Of Range';
+  if (Math.abs(result) > 1e13) {
+    return 'OUT OF RANGE';
   }
   const outcome = parseFloat(result.toFixed(12));
 
