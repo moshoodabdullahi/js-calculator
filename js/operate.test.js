@@ -131,6 +131,10 @@ describe('With Extreme Values', () => {
     expect(operate(1e308, 1e308, '+')).toBe('OUT OF RANGE');
   });
 
+  test('multiplies 1e308 * 1e308 to equal OUT OF RANGE', () => {
+    expect(operate(1e308, 1e308, '*')).toBe('OUT OF RANGE');
+  });
+
   test('subtracts -1e308 - 1e308 to equal OUT OF RANGE', () => {
     expect(operate(-1e308, 1e308, '-')).toBe('OUT OF RANGE');
   });
