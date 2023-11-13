@@ -29,7 +29,7 @@ const operate = (operand1, operand2, operator) => {
     default:
       return 'INVALID OPERATOR';
   }
-  if (Math.abs(result) > 1e13 || Math.abs(result) < -1e13) {
+  if (Math.abs(result) > 1e13) {
     return 'OUT OF RANGE';
   }
   return parseFloat(result.toFixed(12));
