@@ -122,6 +122,7 @@ input:checked:hover {
 }
 
 .screen-display {
+  font-size: 26px;
   color: var(--secondary-color);
 }
 

@@ -2,6 +2,12 @@
 
 > A Calculator webpage built using CSS Variables, Js: addEventListener, querySelector, CSS Flexbox, CSS Grid, Typography and Semantic HTML.
 
+## Overview
+
+When a user is working with the calculator, the user should be able to:
+
+- User should be able to enter up to 13 digit for both sides when working with the calculator and same applies to result size.
+
 ![screenshot](./app_screenshot.png)
 
 ## Built With
