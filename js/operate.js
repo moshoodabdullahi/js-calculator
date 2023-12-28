@@ -1,9 +1,9 @@
-const operate = (operand1, operand2, operator) => {
-  if (typeof operand1 !== 'number' || typeof operand2 !== 'number') {
+const operate = (operandOne, operandTwo, operator) => {
+  if (typeof operandOne !== 'number' || typeof operandTwo !== 'number') {
     return 'NOT A NUMBER';
   }
 
-  if (Math.abs(operand1) > 1e13 || Math.abs(operand2) > 1e13) {
+  if (Math.abs(operandOne) > 1e13 || Math.abs(operandTwo) > 1e13) {
     return 'OUT OF RANGE';
   }
 
@@ -11,19 +11,19 @@ const operate = (operand1, operand2, operator) => {
 
   switch (operator) {
     case '+':
-      result = operand1 + operand2;
+      result = operandOne + operandTwo;
       break;
     case '-':
-      result = operand1 - operand2;
+      result = operandOne - operandTwo;
       break;
     case '*':
-      result = operand1 * operand2;
+      result = operandOne * operandTwo;
       break;
     case '/':
-      if (operand2 === 0) {
+      if (operandTwo === 0) {
         return 'UNDEFINED';
       }
-      result = operand1 / operand2;
+      result = operandOne / operandTwo;
       break;
 
     default:
