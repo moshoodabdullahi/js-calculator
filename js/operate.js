@@ -1,4 +1,11 @@
-const operate = (operandOne, operandTwo, operator) => {
+const operate = (operand1, operand2, operator) => {
+  const operandOne = Number(operand1);
+  const operandTwo = Number(operand2);
+
+  if (isNaN(operandOne) || isNaN(operandTwo)) {
+    return 'NOT A NUMBER';
+  }
+
   if (typeof operandOne !== 'number' || typeof operandTwo !== 'number') {
     return 'NOT A NUMBER';
   }
@@ -32,7 +39,7 @@ const operate = (operandOne, operandTwo, operator) => {
   if (Math.abs(result) > 1e13) {
     return 'OUT OF RANGE';
   }
-  return parseFloat(result.toFixed(12));
+  return parseFloat(result.toFixed(12)).toString();
 };
 
 module.exports = operate;
