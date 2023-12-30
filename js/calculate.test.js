@@ -72,11 +72,11 @@ describe("when 'input' is an operator", () => {
   });
 
   it('updates all values when all values are not null', () => {
-    data = { operandOne: '2', operandTwo: '3', displayValue: '5', operator: '+' };
+    data = { operandOne: '2', operandTwo: '3', displayValue: '3', operator: '+' };
     const calculation = calculate('-', data);
-    expect(calculation).toHaveProperty('operandOne', '2');
+    expect(calculation).toHaveProperty('operandOne', '5');
     expect(calculation).toHaveProperty('operandTwo', null);
-    expect(calculation).toHaveProperty('displayValue', '5'); 
+    expect(calculation).toHaveProperty('displayValue', '5');
     expect(calculation).toHaveProperty('operator', '-');
   });
 });
