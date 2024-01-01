@@ -47,6 +47,25 @@ function calculate(input, calcObject) {
     }
   }
 
+  if (input === '=') {
+    if (operandOne === null) {
+      return { operandOne, operandTwo, displayValue, operator };
+    }
+    if (operator === null) {
+      return { operandOne, operandTwo, displayValue, operator };
+    }
+    if (operandTwo === null) {
+      operandTwo = null;
+      displayValue = operandOne;
+    } else {
+      const result = operate(operandOne, operandTwo, operator);
+      operandOne = result;
+      operandTwo = null;
+      displayValue = result;
+      operator = null;
+    }
+  }
+
   return { operandOne, operandTwo, displayValue, operator };
 }
 

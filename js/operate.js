@@ -2,7 +2,7 @@ const operate = (operand1, operand2, operator) => {
   const operandOne = Number(operand1);
   const operandTwo = Number(operand2);
 
-  if (isNaN(operandOne) || isNaN(operandTwo)) {
+  if (Number.isNaN(operandOne) || Number.isNaN(operandTwo)) {
     return 'NOT A NUMBER';
   }
 
