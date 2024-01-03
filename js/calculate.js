@@ -71,18 +71,24 @@ function calculate(input, calcObject) {
       return { operandOne, operandTwo, displayValue, operator };
     }
     if (operator === null) {
-      operandOne = null;
-      displayValue = operandOne;
-      operator = null;
+      if (operandOne.length >= 2) {
+        operandOne = operandOne.slice(0, -1);
+        displayValue = operandOne;
+      } else {
+        operandOne = null;
+        displayValue = operandOne;
+      }
     } else if (operandTwo === null) {
-      operandTwo = null;
       displayValue = operandOne;
       operator = null;
     } else {
-      operandOne = null;
-      operandTwo = null;
-      displayValue = operandOne;
-      operator = null;
+      if (operandTwo.length >= 2) {
+        operandTwo = operandTwo.slice(0, -1);
+        displayValue = operandTwo;
+      } else {
+        operandTwo = null;
+        displayValue = operandOne;
+      }
     }
   }
 
