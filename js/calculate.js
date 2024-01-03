@@ -66,6 +66,26 @@ function calculate(input, calcObject) {
     }
   }
 
+  if (input === 'DEL') {
+    if (operandOne === null) {
+      return { operandOne, operandTwo, displayValue, operator };
+    }
+    if (operator === null) {
+      operandOne = null;
+      displayValue = operandOne;
+      operator = null;
+    } else if (operandTwo === null) {
+      operandTwo = null;
+      displayValue = operandOne;
+      operator = null;
+    } else {
+      operandOne = null;
+      operandTwo = null;
+      displayValue = operandOne;
+      operator = null;
+    }
+  }
+
   return { operandOne, operandTwo, displayValue, operator };
 }
 
