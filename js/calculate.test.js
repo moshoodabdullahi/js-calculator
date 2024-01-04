@@ -174,3 +174,41 @@ describe("when 'input' is DEL", () => {
     expect(calculation).toHaveProperty('operator', '+');
   });
 });
+
+describe("when 'input' is RESET", () => {
+  it('does not update input when all values are null', () => {
+    data = { operandOne: null, operandTwo: null, displayValue: null, operator: null };
+    const calculation = calculate('RESET', data);
+    expect(calculation).toHaveProperty('operandOne', null);
+    expect(calculation).toHaveProperty('operandTwo', null);
+    expect(calculation).toHaveProperty('displayValue', null);
+    expect(calculation).toHaveProperty('operator', null);
+  });
+
+  it('update input when operator and operandTwo are null, and operandOne is not null ', () => {
+    data = { operandOne: '2', operandTwo: null, displayValue: '2', operator: null };
+    const calculation = calculate('RESET', data);
+    expect(calculation).toHaveProperty('operandOne', null);
+    expect(calculation).toHaveProperty('operandTwo', null);
+    expect(calculation).toHaveProperty('displayValue', null);
+    expect(calculation).toHaveProperty('operator', null);
+  });
+
+  it('update input when operandTwo is null, operandOne and operator are not null', () => {
+    data = { operandOne: '2', operandTwo: null, displayValue: '2', operator: '+' };
+    const calculation = calculate('RESET', data);
+    expect(calculation).toHaveProperty('operandOne', null);
+    expect(calculation).toHaveProperty('operandTwo', null);
+    expect(calculation).toHaveProperty('displayValue', null);
+    expect(calculation).toHaveProperty('operator', null);
+  });
+
+  it('updates input when all values are not null', () => {
+    data = { operandOne: '2', operandTwo: '3', displayValue: '3', operator: '+' };
+    const calculation = calculate('RESET', data);
+    expect(calculation).toHaveProperty('operandOne', null);
+    expect(calculation).toHaveProperty('operandTwo', null);
+    expect(calculation).toHaveProperty('displayValue', null);
+    expect(calculation).toHaveProperty('operator', null);
+  });
+});

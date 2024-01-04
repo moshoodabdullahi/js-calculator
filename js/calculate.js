@@ -81,14 +81,31 @@ function calculate(input, calcObject) {
     } else if (operandTwo === null) {
       displayValue = operandOne;
       operator = null;
+    } else if (operandTwo.length >= 2) {
+      operandTwo = operandTwo.slice(0, -1);
+      displayValue = operandTwo;
     } else {
-      if (operandTwo.length >= 2) {
-        operandTwo = operandTwo.slice(0, -1);
-        displayValue = operandTwo;
-      } else {
-        operandTwo = null;
-        displayValue = operandOne;
-      }
+      operandTwo = null;
+      displayValue = operandOne;
+    }
+  }
+
+  if (input === 'RESET') {
+    if (operandOne === null) {
+      return { operandOne, operandTwo, displayValue, operator };
+    }
+    if (operator === null) {
+      operandOne = null;
+      displayValue = null;
+    } else if (operandTwo === null) {
+      operandOne = null;
+      displayValue = null;
+      operator = null;
+    } else {
+      operandOne = null;
+      operandTwo = null;
+      displayValue = null;
+      operator = null;
     }
   }
 
