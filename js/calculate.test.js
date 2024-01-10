@@ -175,6 +175,62 @@ describe("when 'input' is DEL", () => {
   });
 });
 
+describe("when 'input' is '.'", () => {
+  it('updates operandOne and displayValue when all values are null', () => {
+    data = { operandOne: null, operandTwo: null, displayValue: null, operator: null };
+    const calculation = calculate('.', data);
+    expect(calculation).toHaveProperty('operandOne', '0.');
+    expect(calculation).toHaveProperty('operandTwo', null);
+    expect(calculation).toHaveProperty('displayValue', '0.');
+    expect(calculation).toHaveProperty('operator', null);
+  });
+
+  it('updates operandOne and displayValue when operator and operandTwo are null, and operandOne is not null ', () => {
+    data = { operandOne: '2', operandTwo: null, displayValue: '2', operator: null };
+    const calculation = calculate('.', data);
+    expect(calculation).toHaveProperty('operandOne', '2.');
+    expect(calculation).toHaveProperty('operandTwo', null);
+    expect(calculation).toHaveProperty('displayValue', '2.');
+    expect(calculation).toHaveProperty('operator', null);
+  });
+
+  it('updates opearandTwo and displayValue when operandTwo is null, operandOne and operator are not null', () => {
+    data = { operandOne: '2', operandTwo: null, displayValue: '2', operator: '+' };
+    const calculation = calculate('.', data);
+    expect(calculation).toHaveProperty('operandOne', '2');
+    expect(calculation).toHaveProperty('operandTwo', '0.');
+    expect(calculation).toHaveProperty('displayValue', '0.');
+    expect(calculation).toHaveProperty('operator', '+');
+  });
+
+  it('updates operandTwo and displayValue when all values are not null', () => {
+    data = { operandOne: '2', operandTwo: '3', displayValue: '3', operator: '+' };
+    const calculation = calculate('.', data);
+    expect(calculation).toHaveProperty('operandOne', '2');
+    expect(calculation).toHaveProperty('operandTwo', '3.');
+    expect(calculation).toHaveProperty('displayValue', '3.');
+    expect(calculation).toHaveProperty('operator', '+');
+  });
+
+  it('does not updates operandOne when operator and operandTwo are null, operandOne and input are not null', () => {
+    data = { operandOne: '2.', operandTwo: null, displayValue: '2.', operator: null };
+    const calculation = calculate('.', data);
+    expect(calculation).toHaveProperty('operandOne', '2.');
+    expect(calculation).toHaveProperty('operandTwo', null);
+    expect(calculation).toHaveProperty('displayValue', '2.');
+    expect(calculation).toHaveProperty('operator', null);
+  });
+
+  it('does not updates operandTwo when operandOne, operator, operandTwo and input are not null', () => {
+    data = { operandOne: '2', operandTwo: '3.', displayValue: '3.', operator: '+' };
+    const calculation = calculate('.', data);
+    expect(calculation).toHaveProperty('operandOne', '2');
+    expect(calculation).toHaveProperty('operandTwo', '3.');
+    expect(calculation).toHaveProperty('displayValue', '3.');
+    expect(calculation).toHaveProperty('operator', '+');
+  });
+});
+
 describe("when 'input' is RESET", () => {
   it('does not update input when all values are null', () => {
     data = { operandOne: null, operandTwo: null, displayValue: null, operator: null };
