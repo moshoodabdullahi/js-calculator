@@ -90,6 +90,29 @@ function calculate(input, calcObject) {
     }
   }
 
+  if (input === '.') {
+    if (operandOne === null) {
+      operandOne = `0${input}`;
+      displayValue = operandOne;
+    } else if (operator === null) {
+      if (!operandOne.includes('.')) {
+        operandOne += input;
+      }
+      displayValue = operandOne;
+    } else if (operandTwo === null) {
+      operandTwo = `0${input}`;
+      if (!operandTwo.includes('.')) {
+        operandTwo += input;
+      }
+      displayValue = operandTwo;
+    } else {
+      if (!operandTwo.includes('.')) {
+        operandTwo += input;
+      }
+      displayValue = operandTwo;
+    }
+  }
+
   if (input === 'RESET') {
     if (operandOne === null) {
       return { operandOne, operandTwo, displayValue, operator };
