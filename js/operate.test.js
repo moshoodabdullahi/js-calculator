@@ -45,12 +45,12 @@ describe('With Zero as Operand', () => {
 });
 
 describe('With Division by Zero', () => {
-  test('divide 6 / 0 to equal UNDEFINED', () => {
-    expect(operate('6', '0', '/')).toBe('UNDEFINED');
+  test('divide 6 / 0 to equal MATH ERR', () => {
+    expect(operate('6', '0', '/')).toBe('MATH ERR');
   });
 
-  test('divide 0 / 0 to equal UNDEFINED', () => {
-    expect(operate('0', '0', '/')).toBe('UNDEFINED');
+  test('divide 0 / 0 to equal MATH ERR', () => {
+    expect(operate('0', '0', '/')).toBe('MATH ERR');
   });
 });
 

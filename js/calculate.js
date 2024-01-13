@@ -81,7 +81,6 @@ function calculate(input, calcObject) {
         }
       } else if (operandTwo === null) {
         displayValue = operandOne;
-        operator = null;
       } else if (operandTwo.length >= 2) {
         operandTwo = operandTwo.slice(0, -1);
         displayValue = operandTwo;

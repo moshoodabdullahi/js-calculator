@@ -28,7 +28,7 @@ const operate = (operand1, operand2, operator) => {
       break;
     case '/':
       if (operandTwo === 0) {
-        return 'UNDEFINED';
+        return 'MATH ERR';
       }
       result = operandOne / operandTwo;
       break;
