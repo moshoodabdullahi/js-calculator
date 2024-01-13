@@ -1,4 +1,4 @@
-const calculate = require('./calculate');
+import calculate from './calculate';
 
 let data;
 beforeEach(() => {

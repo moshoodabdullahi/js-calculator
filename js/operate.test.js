@@ -1,4 +1,4 @@
-const operate = require('./operate');
+import operate from './operate';
 
 describe('With Basic Arithmetic Operations', () => {
   test('adds 0.1 + 0.2 to equal 0.3', () => {

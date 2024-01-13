@@ -1,9 +1,13 @@
-const { AxePuppeteer } = require('axe-puppeteer');
-const path = require('path');
-const fs = require('fs');
+import { AxePuppeteer } from 'axe-puppeteer';
+import puppeteer from 'puppeteer';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function runAccessibilityCheck() {
-  const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch({ headless: 'new' });
   const page = await browser.newPage();
   const filePath = path.join(__dirname, 'index.html');

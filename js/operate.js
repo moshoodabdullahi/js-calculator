@@ -42,4 +42,4 @@ const operate = (operand1, operand2, operator) => {
   return parseFloat(result.toFixed(12)).toString();
 };
 
-module.exports = operate;
+export default operate;
