@@ -33,7 +33,7 @@ function calculate(input, calcObject) {
     case '*':
     case '/':
       if (operandOne === null) {
-        return { operandOne, operandTwo, displayValue, operator };
+        break;
       }
       if (operator === null) {
         operator = input;
@@ -51,7 +51,7 @@ function calculate(input, calcObject) {
 
     case '=':
       if (operandOne === null || operator === null) {
-        return { operandOne, operandTwo, displayValue, operator };
+        break;
       }
 
       if (operandTwo === null) {
@@ -68,7 +68,7 @@ function calculate(input, calcObject) {
 
     case 'DEL':
       if (operandOne === null) {
-        return { operandOne, operandTwo, displayValue, operator };
+        break;
       }
 
       if (operator === null) {
@@ -101,8 +101,8 @@ function calculate(input, calcObject) {
         displayValue = operandOne;
       } else if (operandTwo === null) {
         operandTwo = `0${input}`;
-        if (!operandTwo.includes('.')) {
-          operandTwo += input;
+        if (operandTwo.includes('.')) {
+          operandTwo - input;
         }
         displayValue = operandTwo;
       } else {
@@ -115,7 +115,7 @@ function calculate(input, calcObject) {
 
     case 'RESET':
       if (operandOne === null) {
-        return { operandOne, operandTwo, displayValue, operator };
+        break;
       }
       if (operator === null) {
         operandOne = null;
@@ -130,7 +130,7 @@ function calculate(input, calcObject) {
         displayValue = null;
         operator = null;
       }
-      return { operandOne, operandTwo, displayValue, operator };
+      break;
     default:
       return { operandOne, operandTwo, displayValue, operator };
   }
