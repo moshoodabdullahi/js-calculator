@@ -1,9 +1,16 @@
 const operate = (operand1, operand2, operator) => {
-  if (typeof operand1 !== 'number' || typeof operand2 !== 'number') {
+  const operandOne = Number(operand1);
+  const operandTwo = Number(operand2);
+
+  if (Number.isNaN(operandOne) || Number.isNaN(operandTwo)) {
     return 'NOT A NUMBER';
   }
 
-  if (Math.abs(operand1) > 1e13 || Math.abs(operand2) > 1e13) {
+  if (typeof operandOne !== 'number' || typeof operandTwo !== 'number') {
+    return 'NOT A NUMBER';
+  }
+
+  if (Math.abs(operandOne) > 1e13 || Math.abs(operandTwo) > 1e13) {
     return 'OUT OF RANGE';
   }
 
@@ -11,19 +18,19 @@ const operate = (operand1, operand2, operator) => {
 
   switch (operator) {
     case '+':
-      result = operand1 + operand2;
+      result = operandOne + operandTwo;
       break;
     case '-':
-      result = operand1 - operand2;
+      result = operandOne - operandTwo;
       break;
     case '*':
-      result = operand1 * operand2;
+      result = operandOne * operandTwo;
       break;
     case '/':
-      if (operand2 === 0) {
-        return 'UNDEFINED';
+      if (operandTwo === 0) {
+        return 'MATH ERR';
       }
-      result = operand1 / operand2;
+      result = operandOne / operandTwo;
       break;
 
     default:
@@ -32,7 +39,7 @@ const operate = (operand1, operand2, operator) => {
   if (Math.abs(result) > 1e13) {
     return 'OUT OF RANGE';
   }
-  return parseFloat(result.toFixed(12));
+  return parseFloat(result.toFixed(12)).toString();
 };
 
-module.exports = operate;
+export default operate;
