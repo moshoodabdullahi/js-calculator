@@ -95,20 +95,19 @@ function calculate(input, calcObject) {
         operandOne = `0${input}`;
         displayValue = operandOne;
       } else if (operator === null) {
-        if (!operandOne.includes('.')) {
-          operandOne += input;
+        if (operandOne.includes('.')) {
+          break;
         }
+        operandOne = `${operandOne}${input}`;
         displayValue = operandOne;
       } else if (operandTwo === null) {
         operandTwo = `0${input}`;
-        if (operandTwo.includes('.')) {
-          operandTwo - input;
-        }
         displayValue = operandTwo;
       } else {
-        if (!operandTwo.includes('.')) {
-          operandTwo += input;
+        if (operandTwo.includes('.')) {
+          break;
         }
+        operandTwo = `${operandTwo}${input}`;
         displayValue = operandTwo;
       }
       break;
