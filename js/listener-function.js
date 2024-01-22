@@ -13,6 +13,6 @@ buttonKeypad.addEventListener('click', (event) => {
   }
 });
 
-if (displayValue === nulll) {
+if (displayValue === null) {
   displayValue = '0';
 }
