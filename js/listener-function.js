@@ -1,6 +1,7 @@
 import calculate from './calculate';
 
 let calcObject = { operandOne: null, operandTwo: null, displayValue: null, operator: null };
+let displayValue;
 
 const screenDisplay = document.querySelector('.screen-display');
 const buttonKeypad = document.querySelector('.keypad');
