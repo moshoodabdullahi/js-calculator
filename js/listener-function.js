@@ -12,3 +12,7 @@ buttonKeypad.addEventListener('click', (event) => {
     screenDisplay.textContent = calcObject.displayValue;
   }
 });
+
+if (displayValue === nulll) {
+  displayValue = '0';
+}
