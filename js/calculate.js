@@ -13,6 +13,9 @@ function calculate(input, calcObject) {
     case '7':
     case '8':
     case '9':
+      if (displayValue === null) {
+        displayValue = '0';
+      }
       if (operandOne === null) {
         operandOne = input;
         displayValue = operandOne;
