@@ -9,6 +9,6 @@ buttonKeypad.addEventListener('click', (event) => {
   if (event.target.type === 'button') {
     const input = event.target.value;
     calcObject = calculate(input, calcObject);
-    screenDisplay.textContent = calcObject.displayValue;
+    screenDisplay.textContent = calcObject.displayValue || '0';
   }
 });
