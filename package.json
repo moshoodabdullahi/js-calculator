@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "vite": "^5.0.8",
     "axe-core": "^4.7.2",
     "axe-puppeteer": "^1.1.1",
     "cross-env": "^7.0.3",
@@ -25,6 +26,9 @@
     "stylelint-prettier": "^3.0.0"
   },
   "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview --strictPort --port 8080",
     "format": "npx prettier  --write \"**/*.{html,json,md,yaml,yml,js}\"",
     "format:check": "npx prettier  --check \"**/*.{html,json,md,yaml,yml,js}\"",
     "lint": "npx stylelint \"**/*.css\" --fix && npx eslint . --fix",
